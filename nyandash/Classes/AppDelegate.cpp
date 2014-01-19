@@ -1,9 +1,12 @@
 #include "AppDelegate.h"
-#include "AppMacros.h"
-#include "cocos-ext.h"
 #include "HelloWorldScene.h"
 
+#include "cocos2d.h"
+#include "AppMacros.h"
+#include "cocos-ext.h"
+
 USING_NS_CC;
+USING_NS_CC_EXT;
 
 AppDelegate::AppDelegate() {
 
@@ -55,8 +58,16 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // set FPS. the default value is 1.0/60 if you don't call this
     pDirector->setAnimationInterval(1.0 / 60);
 
-    // create a scene. it's an autorelease object
-    CCScene *pScene = HelloWorld::scene();
+    // CocosBuilderのファイルを読み込みゲーム画面を生成する
+    CCNodeLoaderLibrary* ccNodeLoaderLibrary = CCNodeLoaderLibrary::newDefaultCCNodeLoaderLibrary();
+    CCBReader* ccbReader = new CCBReader(ccNodeLoaderLibrary);
+    CCNode* node = ccbReader->readNodeGraphFromFile("GameLayer.ccbi");
+
+    // シーンを用意し、ゲーム画面を設置する
+    CCScene* pScene = CCScene::create();
+    if (node != NULL)
+        pScene->addChild(node);
+    ccbReader->release();
 
     // run
     pDirector->runWithScene(pScene);
