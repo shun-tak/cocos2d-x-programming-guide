@@ -1,7 +1,7 @@
 #include "AppDelegate.h"
-#include "cocos2d.h"
 #include "AppMacros.h"
 #include "cocos-ext.h"
+#include "GameLayerLoader.h"
 
 USING_NS_CC;
 USING_NS_CC_EXT;
@@ -58,6 +58,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     // CocosBuilderのファイルを読み込みゲーム画面を生成する
     CCNodeLoaderLibrary* ccNodeLoaderLibrary = CCNodeLoaderLibrary::newDefaultCCNodeLoaderLibrary();
+    ccNodeLoaderLibrary->registerCCNodeLoader("GameLayer", GameLayerLoader::loader());
     CCBReader* ccbReader = new CCBReader(ccNodeLoaderLibrary);
     CCNode* node = ccbReader->readNodeGraphFromFile("GameLayer.ccbi");
 
