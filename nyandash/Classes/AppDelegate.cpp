@@ -1,6 +1,4 @@
 #include "AppDelegate.h"
-#include "HelloWorldScene.h"
-
 #include "cocos2d.h"
 #include "AppMacros.h"
 #include "cocos-ext.h"
