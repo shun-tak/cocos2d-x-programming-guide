@@ -247,6 +247,11 @@
 		D4EF949C15BD2D8E00D803EB /* Icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = D4EF949B15BD2D8E00D803EB /* Icon-114.png */; };
 		D4EF949E15BD2D9600D803EB /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = D4EF949D15BD2D9600D803EB /* Icon-72.png */; };
 		D4EF94A015BD2D9800D803EB /* Icon-144.png in Resources */ = {isa = PBXBuildFile; fileRef = D4EF949F15BD2D9800D803EB /* Icon-144.png */; };
+		FA2A8E45188B70DC0083AB69 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = FA2A8E40188B70DC0083AB69 /* fonts */; };
+		FA2A8E46188B70DC0083AB69 /* GameLayer.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = FA2A8E41188B70DC0083AB69 /* GameLayer.ccbi */; };
+		FA2A8E47188B70DC0083AB69 /* resources-large in Resources */ = {isa = PBXBuildFile; fileRef = FA2A8E42188B70DC0083AB69 /* resources-large */; };
+		FA2A8E48188B70DC0083AB69 /* resources-small in Resources */ = {isa = PBXBuildFile; fileRef = FA2A8E43188B70DC0083AB69 /* resources-small */; };
+		FA2A8E49188B70DC0083AB69 /* resources-xlarge in Resources */ = {isa = PBXBuildFile; fileRef = FA2A8E44188B70DC0083AB69 /* resources-xlarge */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -744,6 +749,11 @@
 		D4EF949F15BD2D9800D803EB /* Icon-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-144.png"; path = "../proj.ios/Icon-144.png"; sourceTree = "<group>"; };
 		D4F9F37B12E54555005CA6D2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		FA2A8E3F188B6A990083AB69 /* AppMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppMacros.h; path = ../Classes/AppMacros.h; sourceTree = "<group>"; };
+		FA2A8E40188B70DC0083AB69 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		FA2A8E41188B70DC0083AB69 /* GameLayer.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = GameLayer.ccbi; sourceTree = "<group>"; };
+		FA2A8E42188B70DC0083AB69 /* resources-large */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "resources-large"; sourceTree = "<group>"; };
+		FA2A8E43188B70DC0083AB69 /* resources-small */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "resources-small"; sourceTree = "<group>"; };
+		FA2A8E44188B70DC0083AB69 /* resources-xlarge */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "resources-xlarge"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1711,6 +1721,11 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FA2A8E40188B70DC0083AB69 /* fonts */,
+				FA2A8E41188B70DC0083AB69 /* GameLayer.ccbi */,
+				FA2A8E42188B70DC0083AB69 /* resources-large */,
+				FA2A8E43188B70DC0083AB69 /* resources-small */,
+				FA2A8E44188B70DC0083AB69 /* resources-xlarge */,
 				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
 				1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */,
 				1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */,
@@ -1810,6 +1825,11 @@
 				379BB9CD17F03F3700829B88 /* json_internalmap.inl in Resources */,
 				379BB9D017F03F3700829B88 /* json_valueiterator.inl in Resources */,
 				379BB9D217F03F3700829B88 /* sconscript in Resources */,
+				FA2A8E45188B70DC0083AB69 /* fonts in Resources */,
+				FA2A8E46188B70DC0083AB69 /* GameLayer.ccbi in Resources */,
+				FA2A8E47188B70DC0083AB69 /* resources-large in Resources */,
+				FA2A8E48188B70DC0083AB69 /* resources-small in Resources */,
+				FA2A8E49188B70DC0083AB69 /* resources-xlarge in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
