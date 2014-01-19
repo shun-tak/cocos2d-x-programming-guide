@@ -1,4 +1,6 @@
 #include "AppDelegate.h"
+#include "AppMacros.h"
+#include "cocos-ext.h"
 #include "HelloWorldScene.h"
 
 USING_NS_CC;
@@ -18,6 +20,35 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     pDirector->setOpenGLView(pEGLView);
 	
+    // デザインサイズの設定
+    pEGLView->setDesignResolutionSize(designResolutionSize.width, designResolutionSize.height, kResolutionNoBorder);
+
+    CCSize frameSize = pEGLView->getFrameSize();
+
+    std::vector<std::string> searchPath;
+
+    if (frameSize.height > largeResource.size.height)
+    {
+        // iPad Retina用リソースを使用
+        searchPath.push_back(xlargeResource.directory);
+        pDirector->setContentScaleFactor(MIN(xlargeResource.size.height / designResolutionSize.height, xlargeResource.size.width / designResolutionSize.width));
+    }
+    else if (frameSize.height > smallResource.size.height)
+    {
+        // iPad用リソースを使用
+        searchPath.push_back(largeResource.directory);
+        pDirector->setContentScaleFactor(MIN(largeResource.size.height / designResolutionSize.height, largeResource.size.width / designResolutionSize.width));
+    }
+    else
+    {
+        // iPhone用リソースを使用
+        searchPath.push_back(smallResource.directory);
+        pDirector->setContentScaleFactor(MIN(smallResource.size.height / designResolutionSize.height, smallResource.size.width / designResolutionSize.width));
+    }
+
+    // リソースディレクトリを指定
+    CCFileUtils::sharedFileUtils()->setSearchPaths(searchPath);
+
     // turn on display FPS
     pDirector->setDisplayStats(true);
 
